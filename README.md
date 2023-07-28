@@ -77,15 +77,15 @@ And so we get this link:
 https://www.youtube.com/shorts/ezc2rz2cz0E
 ```
 Huh, it's just a meme! <br>
-But wait, did you check the description?
+But wait, did you check the description? <br>
 ![](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-28_233055127.png) <br>
 There we go! Just by reading that you get 5 points out of 15 to get a reward if you show Imed how you got here!
 Now back to the cyberchef with the top encrypted text, base85 which is magic wanded is actually wrong! It is base32>ROT13 !
-![](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-29_001415957.png)
+![](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-29_001415957.png)<br>
 A new hint asks us to use subtitles which give us a link and a pattern of numbers.
 The link takes us to an encrypted Mega file, but we have no key...
-So we go back and check around until we find a post in Community channel section which has a URL to a QR code image linking to another Mega file
-![](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-29_002222200.png)
+So we go back and check around until we find a post in Community channel section which has a URL to a QR code image linking to another Mega file.<br>
+![](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-29_002222200.png)<br>
 Woah! Now we need two keys! Unless we check the QR code picture for metadata!
 ```
 2tvAccECAOvdlw92xDyoGq5muMCAXPJKUJZP3Yr1-wk
@@ -99,8 +99,8 @@ Turns out though, it's length is 43... Which is also the last number in the patt
 ```
 2 3 8 10 12 15 27 30 36 38 43
 ```
-And so we try to lower case the letters of the indexes in the pattern... Which works!
-![](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-29_002816828.png)
+And so we try to lower case the letters of the indexes in the pattern... Which works!<br>
+![](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-29_002816828.png)<br>
 This is a familiar video! It doesn't have anything in it either! No metadata, no steganography, no nothing...
 Oh well, guess we will just concatinate it!
 There you go!
