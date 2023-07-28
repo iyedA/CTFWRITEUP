@@ -5,3 +5,13 @@ This is a miscellanious local ctf competition in our group mainly focusing on cr
 To solve this you need good skills in cryptography decoding and a lot of patience... A LOT.
 
 ## Starting the challenge:
+The information you get for this CTF is as follows:
+[]
+Now the most interesting detail other than the prizes is:
+```
+A+B = Key To Start Chall(e)nge!
+```
+Hence explaining that both links have a relationship with one another. So we open both of them together to see these two:
+[]
+[]
+Now A is just a password submitting page which contains useful informations for later on, but in order to find the password we need to do some digging.<br>
