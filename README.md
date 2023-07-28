@@ -75,8 +75,7 @@ Remember the key role i told you about!?
 And so we get this link:
 ```
 https://www.youtube.com/shorts/ezc2rz2cz0E
-``` 
-<br>
+```
 Huh, it's just a meme! <br>
 But wait, did you check the description?
 ![](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-28_233055127.png) <br>
