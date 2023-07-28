@@ -6,7 +6,7 @@ To solve this you need good skills in cryptography decoding and a lot of patienc
 
 ## Starting the challenge:
 The information you get for this CTF is as follows:
-[]
+!(https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-28_231836206.png)
 Before i start, i want to say that i may skip some strings because they are rabbitholes / a waste of time!
 Now the most interesting detail other than the prizes is:
 ```
@@ -47,12 +47,10 @@ Now back to the video to watch the editing skills and decode the rest of its cry
 ```
 Shouldn't the title's first encrypted part be in the end?
 ```
-Aha! now we go to cyberchef to reverse it and ROT13.
-[]
-It's telling us to find where the email should be. Must be the "about" channel section!
+Aha! now we go to cyberchef to reverse it and ROT13..<br>
+Now it's telling us to find where the email should be. Must be the "about" channel section!
 []
 After joining the server with the encrypted link by decoding it through base64>ROT47>ROT13, we enter an empty server.<br>
-[]
 But we get an interesting role which gives us a link to another server!
 []
 This one has a useful encrypted base64 and ROT13 hint telling us to send xanax a friend request (do it) and checking his about me section.
