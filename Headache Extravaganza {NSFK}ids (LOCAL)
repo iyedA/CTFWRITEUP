@@ -6,7 +6,7 @@ To solve this you need good skills in cryptography decoding and a lot of patienc
 
 ## Starting the challenge:
 The information you get for this CTF is as follows:
-!(https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-28_231836206.png)
+![Données](https://github.com/iyedA/CTFWRITEUP/blob/assets/image_2023-07-28_231836206.png)
 Before i start, i want to say that i may skip some strings because they are rabbitholes / a waste of time!
 Now the most interesting detail other than the prizes is:
 ```
