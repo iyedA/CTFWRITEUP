@@ -7,6 +7,7 @@ To solve this you need good skills in cryptography decoding and a lot of patienc
 ## Starting the challenge:
 The information you get for this CTF is as follows:
 []
+Before i start, i want to say that i may skip some strings because they are rabbitholes / a waste of time!
 Now the most interesting detail other than the prizes is:
 ```
 A+B = Key To Start Chall(e)nge!
@@ -14,4 +15,69 @@ A+B = Key To Start Chall(e)nge!
 Hence explaining that both links have a relationship with one another. So we open both of them together to see these two:
 []
 []
-Now A is just a password submitting page which contains useful informations for later on, but in order to find the password we need to do some digging.<br>
+Now page *A* is just a password submitting page which contains useful informations for later on, but in order to find the password we need to do some digging.<br>
+We could read the hint mentioning %d and \d then studying about them, but we're not pussies that take hints and so instead we focus on page *B*.
+Remember that we were told to not move and try what we see. Thus first thing to do is to look around until we see this:
+[]
+Now how often do you see an ambulance in a gas station? That's definitely something important! Especially the number...
+And indeed, the number is our password through, which takes us to this page:
+[]
+which points towards a text channel in our discord server with a weird name...
+[meme neuron activation]
+Now if your neurons activated like me, you would copy paste that name in cyberchef (The famous cyber swiss army knife) and try ol' reliable ROT13 decoding, which sure enough works right away to tell us:
+```
+from-imed-xd-sanity-check-passed-so-welcome-to-the-maze-be-ready-for-the-rabbit-holes
+```
+We should also mention that the description has a link shaped first string, the second half of it looks familiar, almost like a youtube URL... So we try replacing the domain with youtube and tld with .com
+[]
+Interesting gameplay but an even more interesting description. After putting it in cyberchef for it to magic wand it we get:
+```
+oaawz://fvbab.il/IvXOXKRTr9H
+```
+Doesn't that look like a link? We ROT13 it as always to get a functioning https link leading to another youtube video...
+[]
+Same as always, cyberchef magic wands it from base64 to give us what looks like a paragraph but distorted with special characters like "@", "[", ":"... ROT13 wouldn't work on these, but ROT47 will!
+[]
+Amazing! we got our first part of the flag, we just need to *cybercook* it. We know it needs XOR and a base decoding.<br>
+If you ask me, that looks like a hex, and so we from hex it then xor... But we need a key! except we have the output and the input, we can discover the key.<br>
+We know the flag format starts with "flag{". So we switch the key from hex to UTF8 and type in flag{. Which gives us 1337, a key!
+[]
+Now back to the video to watch the editing skills and decode the rest of its cryptography, we get a hint from the second string in the description.
+```
+Shouldn't the title's first encrypted part be in the end?
+```
+Aha! now we go to cyberchef to reverse it and ROT13.
+[]
+It's telling us to find where the email should be. Must be the "about" channel section!
+[]
+After joining the server with the encrypted link by decoding it through base64>ROT47>ROT13, we enter an empty server.<br>
+[]
+But we get an interesting role which gives us a link to another server!
+[]
+This one has a useful encrypted base64 and ROT13 hint telling us to send xanax a friend request (do it) and checking his about me section.
+[]
+We see he has a key role with the name "freexanax", don't forget about it! But we also see 2 links, one encrypted and another getting us to:
+```
+https://pastebin.com/qw2NyF4r
+```
+In this website xanax thanks us for being a good friend and gives us an encrypted ROT47>ROT13>URL Decode youtube link.. But this one doesn't get us anywhere..!<br>
+Until you notice the last part of it contains:
+```
+M4K35_
+```
+Well believe it or not, you already got the second part of the flag! Now we have:
+```
+flag{pr4c71c3_M4K35_
+```
+You know what they say, "Practice Makes Perfect". So let's keep working!
+Back to the encrypted link Xanax typed in his description.. We go to cyberchef it with Vigenère Decode. But you may ask "We don't have a key!"
+[]
+Remember the key role i told you about!?
+And so we get this link:
+```
+https://www.youtube.com/shorts/ezc2rz2cz0E
+```
+Huh, it's just a meme!
+But wait, did you check the description?
+[]
+There we go! Just by reading that you get 5 points out of 15 to get a reward if you show Imed how you got here!
